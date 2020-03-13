@@ -5,6 +5,7 @@ const cors = require('cors');
 const session = require('express-session');
 const flash = require('connect-flash');
 const MongoStore = require('connect-mongo')(session);
+const connectionString = "mongodb+srv://zamuca303:1108590414@codigofontart-wrc0r.gcp.mongodb.net/test?retryWrites=true&w=majority";
 
 const app = express();
 app.use(express.json());
@@ -24,7 +25,7 @@ app.use((req, res, next) => {
 });
 
 //Iniciando banco de dados
-mongoose.connect('mongodb://localhost:27017/nodeapi', { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(connectionString, { useNewUrlParser: true, useUnifiedTopology: true });
 
 requireDir('./src/models');
 

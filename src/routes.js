@@ -17,5 +17,6 @@ routes.delete('/carrinho/:id', CarrinhoController.delete);
 routes.put('/carrinho/:id', CarrinhoController.update);
 routes.get('/carrinho/:id', CarrinhoController.show);
 routes.get('/todoscarrinho', CarrinhoController.buscaTodos);
+routes.delete('/carrinho', CarrinhoController.deleteAll);
 
 module.exports = routes;

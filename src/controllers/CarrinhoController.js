@@ -31,5 +31,11 @@ module.exports = {
         const carrinho = await Carrinho.find();
 
         return res.json(carrinho);
+    },
+
+    async deleteAll(req, res) {
+        await Carrinho.deleteMany();
+
+        return res.json();
     }
 };
